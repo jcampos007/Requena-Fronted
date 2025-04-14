@@ -1,0 +1,84 @@
+/* Estilos base del calendario */
+.custom-calendar {
+    width: 100%;
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    font-family: inherit;
+}
+
+/* Cabecera del calendario */
+.react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Días de la semana */
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    color: #4b5563;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+/* Días normales */
+.react-calendar__tile {
+    padding: 0.75em 0.5em;
+    background: transparent;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+/* Día actual */
+.react-calendar__tile--now {
+    background: #bfdbfe;
+    color: #1e40af;
+}
+
+/* Día seleccionado (visual consistente) */
+.react-calendar__tile.vacation-day-selected {
+    background-color: #3b82f6 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Día seleccionado con hover */
+.react-calendar__tile.vacation-day-selected:hover {
+    background-color: #2563eb !important;
+    transform: scale(1.05);
+}
+
+/* Días deshabilitados */
+.react-calendar__tile:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-radius: 50%;
+}
+
+/* Botones de navegación */
+.react-calendar__navigation button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.react-calendar__navigation button:hover {
+    background: #f3f4f6;
+}
+
+.react-calendar__navigation button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

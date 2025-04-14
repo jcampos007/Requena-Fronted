@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a43f103a.css",
+    "main.js": "/static/js/main.68d4926b.js",
+    "static/js/820.23e673fe.chunk.js": "/static/js/820.23e673fe.chunk.js",
+    "static/js/936.be85cd6d.chunk.js": "/static/js/936.be85cd6d.chunk.js",
+    "static/js/370.9af7ac2b.chunk.js": "/static/js/370.9af7ac2b.chunk.js",
+    "static/js/514.5741112f.chunk.js": "/static/js/514.5741112f.chunk.js",
+    "static/css/355.a1a39313.chunk.css": "/static/css/355.a1a39313.chunk.css",
+    "static/js/355.55d8ac66.chunk.js": "/static/js/355.55d8ac66.chunk.js",
+    "static/js/557.ede725b4.chunk.js": "/static/js/557.ede725b4.chunk.js",
+    "static/css/229.d71b0bfe.chunk.css": "/static/css/229.d71b0bfe.chunk.css",
+    "static/js/229.c7d6777c.chunk.js": "/static/js/229.c7d6777c.chunk.js",
+    "static/js/199.8f01f31f.chunk.js": "/static/js/199.8f01f31f.chunk.js",
+    "static/js/900.42afe57c.chunk.js": "/static/js/900.42afe57c.chunk.js",
+    "static/js/517.1b7d7430.chunk.js": "/static/js/517.1b7d7430.chunk.js",
+    "static/js/937.e8788b53.chunk.js": "/static/js/937.e8788b53.chunk.js",
+    "static/media/19420.jpg": "/static/media/19420.32e1f873163118450a20.jpg",
+    "static/media/Logo_RequenaAbogados.png": "/static/media/Logo_RequenaAbogados.0faa8b1763683e368062.png",
+    "index.html": "/index.html",
+    "main.a43f103a.css.map": "/static/css/main.a43f103a.css.map",
+    "main.68d4926b.js.map": "/static/js/main.68d4926b.js.map",
+    "820.23e673fe.chunk.js.map": "/static/js/820.23e673fe.chunk.js.map",
+    "936.be85cd6d.chunk.js.map": "/static/js/936.be85cd6d.chunk.js.map",
+    "370.9af7ac2b.chunk.js.map": "/static/js/370.9af7ac2b.chunk.js.map",
+    "514.5741112f.chunk.js.map": "/static/js/514.5741112f.chunk.js.map",
+    "355.a1a39313.chunk.css.map": "/static/css/355.a1a39313.chunk.css.map",
+    "355.55d8ac66.chunk.js.map": "/static/js/355.55d8ac66.chunk.js.map",
+    "557.ede725b4.chunk.js.map": "/static/js/557.ede725b4.chunk.js.map",
+    "229.d71b0bfe.chunk.css.map": "/static/css/229.d71b0bfe.chunk.css.map",
+    "229.c7d6777c.chunk.js.map": "/static/js/229.c7d6777c.chunk.js.map",
+    "199.8f01f31f.chunk.js.map": "/static/js/199.8f01f31f.chunk.js.map",
+    "900.42afe57c.chunk.js.map": "/static/js/900.42afe57c.chunk.js.map",
+    "517.1b7d7430.chunk.js.map": "/static/js/517.1b7d7430.chunk.js.map",
+    "937.e8788b53.chunk.js.map": "/static/js/937.e8788b53.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a43f103a.css",
+    "static/js/main.68d4926b.js"
+  ]
+}

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrequena_frontend=self.webpackChunkrequena_frontend||[]).push([[900],{900:(e,n,r)=>{r.r(n),r.d(n,{default:()=>a});r(43);var t=r(579);const a=()=>(0,t.jsx)("div",{style:{padding:"2rem",textAlign:"center"},children:(0,t.jsx)("h1",{children:"404 - P\xe1gina No Encontrada"})})}}]);
+//# sourceMappingURL=900.42afe57c.chunk.js.map
