@@ -7,6 +7,7 @@ const API_BASE_URL =
     window.location.hostname.startsWith('192.168.')
         ? 'http://192.168.1.101:3001'
         : 'https://requena-backend-production.up.railway.app';
+fetch(`${API_URL}/users`)
 const EmployeeVacationStatus = () => {
     const [requests, setRequests] = useState([]);
     const [newNotifications, setNewNotifications] = useState(0);

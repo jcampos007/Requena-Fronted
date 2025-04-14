@@ -18,55 +18,68 @@ const getUser = () => JSON.parse(localStorage.getItem('user'));
 // Componente para proteger rutas
 const ProtectedRoute = ({ element, allowedRoles }) => {
   const user = getUser();
-  if (!user) return <Navigate to="/login" replace />; // Redirige al login si no hay usuario
-  if (!allowedRoles.includes(user.role)) return <Navigate to="/home" replace />; // Redirige si el rol no está permitido
-  return element; // Renderiza el componente si el usuario tiene el rol adecuado
+  if (!user) return <Navigate to="/login" replace />;
+  if (!allowedRoles.includes(user.role)) return <Navigate to="/home" replace />;
+  return element;
 };
+
+// 💡 Componente oculto para forzar que Tailwind incluya estilos en producción
+const TailwindPreserver = () => (
+    <div className="hidden">
+      <div className="bg-requena-red text-white p-4 rounded-lg shadow">Preserver</div>
+      <div className="bg-blue-500 text-white text-xl">Blue</div>
+      <div className="bg-green-500 p-2 rounded">Green</div>
+      <div className="grid grid-cols-2 gap-4">Grid</div>
+      <div className="text-sm font-bold italic underline">Text</div>
+    </div>
+);
 
 const App = () => {
   return (
-      <Router>
-        {/* Suspense para mostrar un fallback mientras se cargan los componentes */}
-        <Suspense fallback={<div>Cargando...</div>}>
-          <Routes>
-            {/* Rutas públicas */}
-            <Route path="/" element={<Login />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/home" element={<Home />} />
+      <>
+        <TailwindPreserver />
+        <Router>
+          <Suspense fallback={<div>Cargando...</div>}>
+            <Routes>
+              {/* Rutas públicas */}
+              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/home" element={<Home />} />
 
-            {/* Rutas protegidas para administradores */}
-            <Route
-                path="/admin"
-                element={<ProtectedRoute element={<AdminDashboard />} allowedRoles={['admin']} />}
-            />
-            <Route
-                path="/admin/users"
-                element={<ProtectedRoute element={<AdminUsers />} allowedRoles={['admin']} />}
-            />
-            <Route
-                path="/admin/checkins"
-                element={<ProtectedRoute element={<AdminCheckins />} allowedRoles={['admin']} />}
-            />
-            <Route
-                path="/admin/vacations"
-                element={<ProtectedRoute element={<AdminVacations />} allowedRoles={['admin']} />}
-            />
+              {/* Rutas protegidas para administradores */}
+              <Route
+                  path="/admin"
+                  element={<ProtectedRoute element={<AdminDashboard />} allowedRoles={['admin']} />}
+              />
+              <Route
+                  path="/admin/users"
+                  element={<ProtectedRoute element={<AdminUsers />} allowedRoles={['admin']} />}
+              />
+              <Route
+                  path="/admin/checkins"
+                  element={<ProtectedRoute element={<AdminCheckins />} allowedRoles={['admin']} />}
+              />
+              <Route
+                  path="/admin/vacations"
+                  element={<ProtectedRoute element={<AdminVacations />} allowedRoles={['admin']} />}
+              />
 
-            {/* Rutas protegidas para empleados */}
-            <Route
-                path="/employee"
-                element={<ProtectedRoute element={<EmployeeDashboard />} allowedRoles={['employee']} />}
-            />
-            <Route
-                path="/employee/vacation-status"
-                element={<ProtectedRoute element={<EmployeeVacationStatus />} allowedRoles={['employee']} />}
-            />
+              {/* Rutas protegidas para empleados */}
+              <Route
+                  path="/employee"
+                  element={<ProtectedRoute element={<EmployeeDashboard />} allowedRoles={['employee']} />}
+              />
+              <Route
+                  path="/employee/vacation-status"
+                  element={<ProtectedRoute element={<EmployeeVacationStatus />} allowedRoles={['employee']} />}
+              />
 
-            {/* Ruta para páginas no encontradas */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </Router>
+              {/* Ruta para páginas no encontradas */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </Router>
+      </>
   );
 };
 
